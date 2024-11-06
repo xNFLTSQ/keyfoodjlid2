@@ -1,0 +1,83 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #fff;
+}
+
+
+.header, .promos, .recommended, .menu {
+    margin-bottom: 20px;
+}
+
+.header h1 {
+    font-size: 18px;
+    margin: 0;
+}
+
+.header p {
+    font-size: 14px;
+    margin: 5px 0;
+}
+
+.promos {
+    border: 1px solid #000;
+    padding: 10px;
+}
+
+.promos h2 {
+    font-size: 16px;
+    margin: 0;
+}
+
+.promos p {
+    font-size: 14px;
+    margin: 5px 0;
+}
+
+.recommended h2 {
+    font-size: 16px;
+    margin: 0;
+}
+
+.recommended p {
+    font-size: 14px;
+    margin: 5px 0;
+}
+
+.recommended .item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.recommended .item img {
+    margin-right: 10px;
+}
+
+.recommended .item .details {
+    flex-grow: 1;
+}
+
+.recommended .item .details h3 {
+    font-size: 14px;
+    margin: 0;
+}
+
+.recommended .item .details p {
+    font-size: 12px;
+    margin: 5px 0;
+}
+
+.menu {
+    text-align: center;
+}
+
+.menu button {
+    padding: 10px 20px;
+    font-size: 14px;
+}

@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAFA FOOD</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="styles.css">
+    <script src="index.js"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <!-- <img alt="Logo" height="30" src="" width="30"/> -->
+            <div class="title">FUFA FOOD</div>
+            <i class="fas fa-user profile-icon"></i>
+        </div>
+
+        <div class="search-bar">
+            <input placeholder="search" type="text"/>
+        </div>
+
+        <div class="categories">
+            <button>Nasi</button>
+            <button>Kue</button>
+            <button>Minuman</button>
+            <button>Pencuci Mulut</button>
+            <button>Buah</button>
+        </div>
+
+        <div class="items1">
+            <div class="item">
+                <img alt="Nasi Goreng" height="100" src="" width="100"/>
+                <p>nasi goreng</p>
+                <p>12.000</p>
+                <p>10% diskon</p>
+                <i class="fas fa-heart favorite-icon"></i>
+            </div>
+            <div class="item">
+                <img alt="Kue Red Velvet" height="100" src="" width="100"/>
+                <p>kue red velvet</p>
+                <p>350.000</p>
+                <p>25% diskon</p>
+                <i class="fas fa-heart favorite-icon"></i>
+            </div>
+        </div>
+        <div class="items2">
+            <div class="item">
+                <img alt="Bakso" height="100" src="" width="100"/>
+                <p>bakso</p>
+                <p>20.000</p>
+                <p>5% diskon</p>
+                <i class="fas fa-heart favorite-icon"></i>
+            </div>
+            <div class="item">
+                <img alt="Semangka" height="100" src="" width="100"/>
+                <p>semangka</p>
+                <p>15.000</p>
+                <i class="fas fa-heart favorite-icon"></i>
+            </div>
+        </div>
+
+        <div class="icons">
+            <div>
+                <i class="fas fa-save"></i>
+                <p>Saved pictures</p>
+            </div>
+            <div>
+                <i class="fas fa-user-friends"></i>
+                <p>Pro Partners</p>
+            </div>
+            <div>
+                <i class="fas fa-gift"></i>
+                <p>Great Offers</p>
+            </div>
+            <div>
+                <i class="fas fa-star"></i>
+                <p>Top Rated</p>
+            </div>
+            <div>
+                <i class="fas fa-gem"></i>
+                <p>Premium Picks</p>
+            </div>
+        </div>
+
+        <div class="recommendation" style="display: flex; align-items: top;">
+            <img src="th.jpg" alt="A plate of Siomay Bandung with sauce in a street setting" class="mr-4" width="100" height="100"/>
+            <div class="text">
+                <b>recommendation</b>
+                <p>Siomay Bandung</p>
+            </div>
+        </div>
+                <div class="see-all">
+                    <a href="halaman2.html">see all</a>
+                </div>
+            <div class="">
+                <img alt="Cendol Dawet Ayu" height="100" src="" width="100"/>
+                <p>Cendol Dawet Ayu</p>
+                <p>Indonesian, Jawa Tengah</p>
+            </div>
+            <div class="">
+                <img alt="Mie Ayam Bandung" height="100" src="" width="100"/>
+                <p>Mie Ayam Bandung</p>
+                <p>Indonesian, Jawa Barat</p>
+            </div>
+        </div>
+
+    </div>
+
+    <script>
+        // Search functionality
+        const searchInput = document.querySelector('.search-bar input');
+        const items = document.querySelectorAll('.item');
+
+        searchInput.addEventListener('input', function() {
+            const query = searchInput.value.toLowerCase();
+            items.forEach(item => {
+                const itemName = item.querySelector('p:first-child').textContent.toLowerCase();
+                if (itemName.includes(query)) {
+                    item.style.display = 'block';
+                } else {
+                    item.style.display = 'none';
+                }
+            });
+        });
+
+        // Filter items by category
+        const buttons = document.querySelectorAll('.categories button');
+        
+        buttons.forEach(button => {
+            button.addEventListener('click', function() {
+                const category = button.textContent.toLowerCase();
+                items.forEach(item => {
+                    if (item.querySelector('p:first-child').textContent.toLowerCase().includes(category)) {
+                        item.style.display = 'block';
+                    } else {
+                        item.style.display = 'none';
+                    }
+                });
+            });
+        });
+
+        // Add to favorites
+        const favoriteIcons = document.querySelectorAll('.favorite-icon');
+
+        favoriteIcons.forEach(icon => {
+            icon.addEventListener('click', function() {
+                icon.classList.toggle('favorited');
+            });
+        });
+
+        // Show all recommendations
+        const seeAllButton = document.querySelector('.see-all');
+        const recommendationItems = document.querySelectorAll('.recommendation .item');
+
+        seeAllButton.addEventListener('click', function() {
+            recommendationItems.forEach(item => {
+                item.style.display = 'block';
+            });
+        });
+    </script>
+</body>
+</html>

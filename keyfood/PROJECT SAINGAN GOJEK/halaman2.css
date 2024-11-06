@@ -1,0 +1,59 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #fff;
+}
+
+.container {
+    width: 375px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.header .location {
+    font-size: 14px;
+}
+
+.header .icon {
+    font-size: 24px;
+}
+
+.item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.item img {
+    width: 60px;
+    height: 60px;
+    margin-right: 10px;
+}
+
+.item .details {
+    font-size: 14px;
+}
+
+.item .details .title {
+    font-weight: bold;
+}
+
+.item .details .description {
+    color: #666;
+}
+
+.item .details .discount {
+    color: #f00;
+}
+
+.item .details .rating {
+    color: #666;
+}
